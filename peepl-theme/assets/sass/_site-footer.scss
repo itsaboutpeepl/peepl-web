@@ -1,0 +1,36 @@
+.site-footer {
+    background: $gray-800;
+    box-shadow: 0 1000px 0 1000px $gray-800;
+    color: $gray-400;
+    padding: ($spacer * 2) 0;
+
+    a {
+        color: $gray-200;
+
+        @include hover-focus() {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    .nav {
+        margin-left: ($grid-gutter-width / 2 * -1);
+        margin-right: ($grid-gutter-width / 2 * -1);
+    }
+
+    .nav-link {
+        padding: $nav-link-padding-y ($grid-gutter-width / 2);
+    }
+
+    .widget {
+        margin-top: 1rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(#fff, 0.2);
+    }
+
+    .widget__title {
+        font-size: 1em;
+        font-weight: bold;
+        color: $gray-200;
+    }
+}
