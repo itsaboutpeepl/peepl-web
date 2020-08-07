@@ -1,9 +1,15 @@
 <?php
 
-// If user is not logged in, and isn’t looking at an admin page,
+// If user is not logged in, and is looking at the homepage,
 // then we want to show the "under construction" page and nothing else.
 
-if( ! is_wp_login() && ! is_admin() && ! is_user_logged_in() ) { ?>
+$uri = str_replace(
+    '?' . $_SERVER['QUERY_STRING'],
+    '',
+    $_SERVER['REQUEST_URI']
+);
+
+if( $uri == '/' && ! is_user_logged_in() ) { ?>
 
 <!DOCTYPE html>
 <html>
