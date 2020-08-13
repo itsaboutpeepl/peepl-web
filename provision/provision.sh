@@ -82,9 +82,11 @@ mysql -ne "DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';"
 mysql -ne "FLUSH PRIVILEGES"
 
 # Install PHP and associated modules
-# php7.4-gd is so Wordpress can manipulate images / thumbnails.
-# php7.4-curl, php7.4-mbstring, php7.4-soap, and php7.4-xml are handy to have just in case.
-$install php7.4 libapache2-mod-php7.4 php7.4-mysql php7.4-gd php7.4-curl php7.4-mbstring php7.4-soap php7.4-xml
+# https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions
+$install php7.4 imagemagick ghostscript libapache2-mod-php7.4 php7.4-curl php7.4-mbstring php7.4-mysqli php7.4-gd php7.4-imagick php7.4-xml php7.4-zip
+
+# Copy php.ini file into place
+sudo cp /home/vagrant/shared/provision/php.ini /etc/php/7.4/apache2/conf.d/90-vagrant.ini
 
 # Install Git (for Go)
 $install git
