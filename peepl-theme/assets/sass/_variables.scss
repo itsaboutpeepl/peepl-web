@@ -32,6 +32,8 @@ $block-palette: (
 
 // Options
 
+$enable-responsive-font-sizes: true;
+
 // Spacing
 
 // Body
@@ -42,13 +44,46 @@ $block-palette: (
 
 // Grid breakpoints
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // Grid containers
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  // lg: 960px,
+  // xl: 1140px
+);
 
 // Grid columns
 
 // Components
 
 // Typography
+
+$font-family-sans-serif: "Montserrat", Arial, sans-serif;
+$font-family-serif: "PT Serif", Georgia, serif;
+
+$font-size-base: 1rem * (21/16); // 21px
+$font-size-lg: $font-size-base * (24/21); // 24px
+$font-size-sm: $font-size-base * (16/21); // 16px
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.4;
+$h4-font-size: $font-size-base * 1.2;
+$h5-font-size: $font-size-base * 1.1;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: 0.333em;
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: 700;
 
 // Tables
 
@@ -73,6 +108,8 @@ $navbar-light-hover-color: $black;
 $navbar-light-active-color: $black;
 $navbar-light-disabled-color: rgba($gray-800, .6);
 $navbar-light-toggler-border-color: rgba($gray-800, .6) !default;
+
+$navbar-toggler-font-size: $font-size-sm;
 
 // Dropdowns
 
@@ -117,3 +154,8 @@ $navbar-light-toggler-border-color: rgba($gray-800, .6) !default;
 // Printing
 
 // Responsive font sizes
+
+$rfs-base-font-size: 1rem * (14/21); // fonts scale down from 21px to 14px on a (theoretical) zero-width viewport
+$rfs-breakpoint: map-get($grid-breakpoints, 'md');
+$rfs-breakpoint-unit: unit($rfs-breakpoint);
+$rfs-factor: 5;

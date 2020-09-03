@@ -20,6 +20,7 @@
 
     .nav-link {
         padding: $nav-link-padding-y ($grid-gutter-width / 2);
+        @include font-size($font-size-sm);
     }
 
     .widget {

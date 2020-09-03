@@ -2,6 +2,12 @@
 
 function enqueue_frontend_stylesheets() {
     wp_enqueue_style(
+        'google-fonts',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap',
+        array(),
+        null
+    );
+    wp_enqueue_style(
         'peepl-frontend-style',
         get_theme_file_uri('/assets/css/frontend-style.css'),
         array(),
@@ -42,6 +48,9 @@ function enqueue_admin_stylesheets() {
 add_action( 'admin_enqueue_scripts', 'enqueue_admin_stylesheets' );
 
 function enqueue_editor_stylesheet() {
+    add_editor_style(
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'
+    );
     add_editor_style(
         '/assets/css/editor-style.css'
     );

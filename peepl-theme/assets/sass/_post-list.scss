@@ -46,6 +46,10 @@
     color: $text-muted;
 }
 
+.post-list__item__excerpt {
+    font-family: $font-family-serif;
+}
+
 .post-list__empty {
     padding: ( $spacer * 2 ) 0;
     text-align: center;

@@ -13,7 +13,7 @@
     <!-- Using template: <?php echo $GLOBALS['current_theme_template']; ?> -->
 
     <header class="navbar navbar-expand-md navbar-light">
-        <div class="container">
+        <div class="container-md">
 
             <?php echo get_navbar_brand(); ?>
 

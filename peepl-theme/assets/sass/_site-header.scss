@@ -3,7 +3,7 @@
 }
 
 .navbar-toggler {
-    padding: 0.75rem;
+    padding: 0.5rem 0.75rem;
 }
 
 .navbar-brand {
@@ -21,14 +21,7 @@
         display: block;
         font-weight: 500;
         padding: 0.25rem 1rem;
-
-        @include media-breakpoint-up(lg) {
-            font-size: 1.2rem;
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: 1.3rem;
-        }
+        @include font-size($font-size-sm);
     }
 
     .dropdown-toggle {
@@ -50,7 +43,6 @@
         .nav-link {
             border-top: 1px solid rgba(#000, 0.2);
             padding: 0.5rem 0;
-            font-size: 1.2em;
         }
 
         .dropdown-menu {

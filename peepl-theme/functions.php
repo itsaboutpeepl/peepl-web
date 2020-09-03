@@ -12,7 +12,6 @@ require get_parent_theme_file_path( '/inc/carbon-fields.php' );
 
 require get_parent_theme_file_path( '/inc/functions-general.php' );
 require get_parent_theme_file_path( '/inc/functions-navbar.php' );
-require get_parent_theme_file_path( '/inc/functions-sidebars.php' );
 require get_parent_theme_file_path( '/inc/functions-post-list.php' );
 
 require get_parent_theme_file_path( '/inc/enqueue.php' );

@@ -12,26 +12,32 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
+@import "bootstrap/type";
+
 body {
     background-color: $body-bg;
     color: $body-color;
-}
-
-.cf-block__preview,
-.editor-rich-text {
     font-family: $font-family-base;
     @include font-size($font-size-base);
     font-weight: $font-weight-base;
     line-height: $line-height-base;
+}
 
-    a {
-        color: $link-color;
-        text-decoration: $link-decoration;
+.is-root-container {
+    font-family: $font-family-serif;
+}
 
-        @include hover() {
-            color: $link-hover-color;
-            text-decoration: $link-hover-decoration;
-        }
+.wp-block {
+    max-width: map-get($container-max-widths, 'md') - $grid-gutter-width;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+
+    @include hover() {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
     }
 }
 
@@ -43,14 +49,6 @@ p {
 p.lead {
     @include font-size($lead-font-size);
     font-weight: $lead-font-weight;
-}
-
-.editor-post-title__input {
-    font-family: ($headings-font-family or $font-family-base);
-    font-weight: $headings-font-weight;
-    line-height: $headings-line-height;
-    color: $headings-color;
-    @include font-size($h1-font-size);
 }
 
 .wp-block-separator.is-style-wide {

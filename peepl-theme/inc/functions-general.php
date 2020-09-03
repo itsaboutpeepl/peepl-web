@@ -31,7 +31,7 @@ function get_posts_page_title() {
 
 function start_site_content() {
     echo '<div class="site-content">' . "\n";
-    echo '<div class="container">' . "\n";
+    echo '<div class="container-md">' . "\n";
 }
 
 function end_site_content() {
