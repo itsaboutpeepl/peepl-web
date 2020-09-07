@@ -15,6 +15,10 @@ $green:   #28a745;
 $teal:    #20c997;
 $cyan:    #17a2b8;
 
+$color-peepl-red: #FC0C1A;
+$color-peepl-orange: #FC870C;
+$color-peepl-cream: #F5F2EB;
+
 // This list of colours should match the colours in wp-theme-support.php
 $block-palette: (
     'blue': $blue,
@@ -103,11 +107,11 @@ $headings-font-weight: 700;
 
 $navbar-nav-link-padding-x: 1rem;
 
-$navbar-light-color: $gray-800;
-$navbar-light-hover-color: $black;
-$navbar-light-active-color: $black;
-$navbar-light-disabled-color: rgba($gray-800, .6);
-$navbar-light-toggler-border-color: rgba($gray-800, .6) !default;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: rgba($navbar-dark-color, 0.8);
+$navbar-dark-active-color: $navbar-dark-color;
+$navbar-dark-disabled-color: rgba($navbar-dark-color, 0.8);
+$navbar-dark-toggler-border-color: rgba($navbar-dark-color, 0.6);
 
 $navbar-toggler-font-size: $font-size-sm;
 

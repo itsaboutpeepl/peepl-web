@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #eee;
+    background-color: $color-peepl-red;
 }
 
 .navbar-toggler {
@@ -34,6 +34,7 @@
         left: auto;
         right: 0;
         box-shadow: $box-shadow-lg;
+        @include font-size($font-size-sm);
     }
 }
 
@@ -58,9 +59,10 @@
         .dropdown-item {
             white-space: normal;
             padding: 0.25rem 1rem;
+            color: $navbar-dark-color;
 
             @include hover-focus-active() {
-                color: $navbar-light-color;
+                color: $navbar-dark-color;
                 text-decoration: underline;
                 background: transparent;
             }

@@ -9,10 +9,7 @@
 
     <?php wp_body_open(); ?>
 
-    <!-- URL requested: <?php echo $GLOBALS['current_request_url']; ?> -->
-    <!-- Using template: <?php echo $GLOBALS['current_theme_template']; ?> -->
-
-    <header class="navbar navbar-expand-md navbar-light">
+    <header class="navbar navbar-expand-md navbar-dark">
         <div class="container-md">
 
             <?php echo get_navbar_brand(); ?>
