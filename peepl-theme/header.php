@@ -34,3 +34,7 @@
 
         </div>
     </header>
+
+  <?php if ( is_layout('person-page') ) {
+    the_person_page_header();
+  } ?>
