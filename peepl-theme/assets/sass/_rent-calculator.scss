@@ -1,0 +1,119 @@
+.rent-calculator {
+    background: $color-roost-aqua;
+    border: 1px solid $color-roost-aqua;
+    border-radius: $border-radius;
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.1), 0 1rem 2rem -0.5rem mix($color-roost-aqua, #fff, 50%);
+    padding: map-get($spacers, 3);
+    // max-width: 26rem;
+    cursor: pointer;
+
+    transition: all 250ms ease-out;
+
+    @include media-breakpoint-up(md) {
+        padding: map-get($spacers, 4);
+    }
+}
+
+.rent-calculator--active {
+    background-color: #fff;
+    box-shadow: $box-shadow;
+    border-color: $border-color;
+    cursor: default;
+}
+
+.rent-calculator--complete {
+    background: $color-roost-aqua;
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.1), 0 1rem 2rem -0.5rem mix($color-roost-aqua, #fff, 50%);
+    border-color: $color-roost-aqua;
+    cursor: default;
+}
+
+.rent-calculator__cta {
+    opacity: 1;
+    max-height: 300px;
+    overflow: hidden;
+    transition: inherit;
+
+    .rent-calculator--complete & {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    p {
+        margin: 0;
+        opacity: 1;
+        max-height: 2em;
+        overflow: hidden;
+        transition: inherit;
+
+        .rent-calculator--active & {
+            opacity: 0;
+            max-height: 0;
+        }
+    }
+
+    h2 {
+        margin: 0.5rem 0 0 0;
+        transition: inherit;
+
+        .rent-calculator--active & {
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+        }
+    }
+}
+
+.rent-calculator__form {
+    margin: -0.5rem;
+    padding: 0.5rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: inherit;
+
+    .rent-calculator--active & {
+        opacity: 1;
+        max-height: 350px;
+    }
+
+    .rent-calculator--complete & {
+        opacity: 0;
+        max-height: 0;
+    }
+}
+
+.rent-calculator__result {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: inherit;
+
+    .rent-calculator--complete & {
+        opacity: 1;
+        max-height: 250px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        transition: inherit;
+
+        .rent-calculator--complete & {
+            font-size: 2rem;
+        }
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        color: inherit;
+        font-size: 0.875em;
+
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 0.5em;
+        }
+    }
+}

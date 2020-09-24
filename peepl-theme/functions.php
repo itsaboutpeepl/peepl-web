@@ -20,3 +20,5 @@ require get_parent_theme_file_path( '/inc/menus.php' );
 require get_parent_theme_file_path( '/inc/layouts.php' );
 
 require get_parent_theme_file_path( '/inc/under-construction.php' );
+
+require get_parent_theme_file_path( '/shortcodes/rent-calculator.php' );
