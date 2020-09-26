@@ -14,7 +14,7 @@ if ( have_posts() ) {
 
         <h1><?php the_title(); ?></h1>
       <?php if ( get_post_type() == 'post' ) { ?>
-        <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('jS F Y'); ?></time>
+        <time datetime="<?php the_time( 'Y-m-d' ); ?>" class="d-block mt-n2 mb-4"><?php the_time('jS F Y'); ?></time>
       <?php } ?>
 
         <div class="longform">
