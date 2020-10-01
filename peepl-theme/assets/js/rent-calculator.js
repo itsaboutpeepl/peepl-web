@@ -20,13 +20,13 @@ jQuery(function ($) {
             (12 * (dateTo.getFullYear() - dateFrom.getFullYear()));
     };
 
-    var renderPot = function (rent, started) {
+    var renderKitty = function (rent, started) {
         var now = new Date();
         var months = monthDiff(started, now);
 
-        var pot = rent * months * 0.08;
+        var kitty = rent * months * 0.08;
 
-        $('.js-pot').text(pot);
+        $('.js-kitty').text(kitty);
         $('.js-monthly-payment').text(rent);
         $('.js-since-date').text(
             monthNames[started.getMonth()] + ' ' + started.getFullYear()
@@ -41,7 +41,7 @@ jQuery(function ($) {
 
     loadData(function (data) {
         if (rent && started) {
-            renderPot(rent, started);
+            renderKitty(rent, started);
             $('.js-rent-calculator').css(
                 'transition', 'none'
             ).addClass(
@@ -66,7 +66,7 @@ jQuery(function ($) {
         var started = new Date();
         started.setMonth(started.getMonth() - months);
 
-        renderPot(rent, started);
+        renderKitty(rent, started);
 
         $('.js-rent-calculator').addClass('rent-calculator--complete');
     });

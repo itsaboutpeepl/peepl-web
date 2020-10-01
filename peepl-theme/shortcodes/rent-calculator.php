@@ -12,7 +12,7 @@ function rent_calculator_shortcode(){
 
 <div class="rent-calculator my-4 my-md-5 js-rent-calculator">
   <div class="rent-calculator__result">
-    <h2>You’d already have £<span class="js-pot"></span> in your pot</h2>
+    <h2>You’d already have £<span class="js-kitty"></span> in your kitty</h2>
     <p>If you’d been roosting instead of renting since <span class="js-since-date"></span>.</p>
     <button class="js-edit-calculation">
       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@ function rent_calculator_shortcode(){
           <div class="input-group-text">months</div>
         </div>
       </div>
-    </div> <button type="submit" class="btn btn-primary btn-block js-calculate-pot">Calculate my pot</button>
+    </div> <button type="submit" class="btn btn-primary btn-block js-calculate-kitty">Calculate my kitty</button>
   </form>
 </div>
 
